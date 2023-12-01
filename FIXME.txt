@@ -1,0 +1,5 @@
+Tareas
+
+* Hacer una pequeña plantilla para el envio de correos
+* Descripciones para todos los apartados
+* Revisar tipografia y colores
