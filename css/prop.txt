@@ -1,0 +1,143 @@
+En el archivo CSS externo (css/style_gpt.css):
+.font-secondary
+.btn-play
+.py-3
+.px-5
+.back-to-top
+.scroll-to-bottom
+.bg-gallery
+.custom-margin
+En las etiquetas HTML:
+En el navbar:
+.navbar
+.fixed-top
+.shadow-sm
+.navbar-expand-lg
+.bg-dark
+.navbar-dark
+.py-3
+.py-lg-0
+.px-lg-5
+.navbar-brand
+.d-clock
+.d-lg-none
+.navbar-toggler
+.collapse
+.justify-content-between
+.nav-item
+.nav-link
+.active
+.mx-5
+.d-none
+.d-lg-block
+En el carrusel:
+.container-fluid
+.p-0
+.mb-5
+.pb-5
+.carousel
+.carousel-fade
+.position-relative
+.carousel-inner
+.carousel-item
+.active
+.position-absolute
+.w-100
+.h-100
+.d-flex
+.flex-column
+.align-items-center
+.justify-content-center
+.p-3
+.max-width-900px
+.display-1
+.text-white
+.mt-n3
+.mb-md-4
+.text-primary
+.text-uppercase
+.font-weight-normal
+.btn-play
+.mx-auto
+.circle
+#days_circle1, #hours_circle1, #minutes_circle1, #seconds_circle1, ... (hasta #seconds_circle3)
+.carousel-control-prev, .carousel-control-next
+.justify-content-start, .justify-content-end
+.btn-primary
+.px-0
+.carousel-control-prev-icon, .carousel-control-next-icon
+.mt-3
+En la sección "Los Novios":
+.container-fluid
+.py-5
+.container
+.section-title
+.text-uppercase
+.text-primary
+.font-secondary
+.display-4
+.far, .fa-heart
+.row
+.m-0
+.mb-4, .mb-md-0
+.pb-2, .pb-md-0
+.col-md-6, .p-0, .text-center, .text-md-right
+.h-100, .d-flex, .flex-column, .justify-content-center, .bg-secondary
+.font-weight-normal, .text-muted
+.fa
+.text-primary
+.text-center, .text-md-left
+.min-height-400px
+.img-fluid
+.position-absolute
+En la sección "Nuestra Historia":
+.container-fluid
+.py-5
+.pt-5, .pb-3
+.container
+.timeline
+.position-relative
+.p-0
+.col-md-6, .text-center, .text-md-right
+.img-fluid
+.mr-md-3
+.text-center, .text-md-left
+.ml-md-3
+En la sección "Galería":
+.container-fluid, .bg-gallery
+.padding, .margin
+.position-relative
+.owl-carousel, .gallery-carousel
+.gallery-item
+.img-fluid, .w-100
+.fa-plus, .fa-2x, .text-white
+.data-lightbox
+En la sección "Evento":
+.container-fluid
+.py-5
+.container
+.text-center
+.border-right, .border-primary
+.text-md-right, .mr-md-3, .mb-4, .mb-md-0
+.img-fluid, .mb-4
+.border-left, .border-primary
+.text-md-left, .ml-md-3
+En la sección "RSVP":
+.container-fluid
+.py-5
+.container
+.text-center
+.form-row
+.form-group
+.col-sm-6
+.searchInput
+.resultList
+.form-control
+.bg-secondary, .border-0, .py-4, .px-3
+.form-row
+.form-group, .col-sm-6
+.form-group, .col-sm-6
+.form-group, .col-sm-6
+.form-group, .col-sm-6
+.btn-primary, .btn
+.mt-3
