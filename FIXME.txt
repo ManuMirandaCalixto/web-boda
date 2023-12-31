@@ -3,3 +3,15 @@ Tareas
 * Hacer una pequeña plantilla para el envio de correos
 * Descripciones para todos los apartados
 * Revisar tipografia y colores
+
+* 31/12/2023
+* Poner una fuente mas bonita (Por ejemplo la fuente marimanu en la frase "llego el gran dia") cuando el contador de dias llegue a cero.
+* cuando pincha en el carrusel de inico cambiar los colores al seleccionado.
+* Revisar todas las fotos. Pensar en las adecuadas. Pensar en foto para fondo de galeria.
+* Revisar la opacidad de los numeros cuenta atras. Objetivo: Numeros con opacidad 1 y fondo con opacidad 0.5
+* Identificar el color de la barra de inicio y cambiarlo por un color azul mas claro.
+* Identificar el color de la firma de la descripcion de los novios.
+* El orden de colores de la descripcion de los novios va a ser: Nombre: Dorado; descripcion: Rojo veneciano; Firma: Negro.
+* Cambiar el color de la descripcion de la galeria. Esta en blanco, hay que identificar el color.
+* LA seleccion de menu que este centrada.
+* Cambiar el color de los bordes sombreados de las cajas del save the date. Estan en naranja, cambiar a dorado.

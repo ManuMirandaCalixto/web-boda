@@ -229,18 +229,18 @@
                     </div>
                     <div class="col-md-6 text-center text-md-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-                            <h4 class="mb-2">Primera cita de novios</h4>
-                            <p class="text-uppercase mb-2">25 de Noviembre de 2017</p>
-                            <p class="m-0">Ese día me comí una crepe de puta madre.</p>
+                            <h4 class="mb-2">Año 1</h4>
+                            <p class="text-uppercase mb-2">Fecha año 1</p>
+                            <p class="m-0">Descipción año 1</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-                            <h4 class="mb-2">Nuestro segundo aniversario</h4>
-                            <p class="text-uppercase mb-2">9 de Noviembre de 2019</p>
-                            <p class="m-0">Que caro el corral del agua me cago en mi vida.</p>
+                            <h4 class="mb-2">Año 2</h4>
+                            <p class="text-uppercase mb-2">Fecha año 2</p>
+                            <p class="m-0">Descripción año 2</p>
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-md-left">
@@ -253,10 +253,46 @@
                     </div>
                     <div class="col-md-6 text-center text-md-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-                            <h4 class="mb-2">La pedida de mano</h4>
-                            <p class="text-uppercase mb-2">14 de Noviembre de 2022</p>
-                            <p class="m-0">No tengo fotos a mano de la pedida así que pongo a la Pepi jaja.</p>
+                            <h4 class="mb-2">Año 3</h4>
+                            <p class="text-uppercase mb-2">Fecha año 3</p>
+                            <p class="m-0">Descripción año 3</p>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+                            <h4 class="mb-2">Año 4</h4>
+                            <p class="text-uppercase mb-2">Fecha año 4</p>
+                            <p class="m-0">Descripción año 4</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <img class="img-fluid ml-md-3" src="img/historia2.jpg" alt="", heigth="300" width="300">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <img class="img-fluid mr-md-3" src="img/historia3.jpg" alt="", heigth="300" width="300">
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
+                            <h4 class="mb-2">Año 5</h4>
+                            <p class="text-uppercase mb-2">Fecha año 5</p>
+                            <p class="m-0">Descripción año 5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+                            <h4 class="mb-2">Año 6</h4>
+                            <p class="text-uppercase mb-2">Fecha año 6</p>
+                            <p class="m-0">Descripción año 6</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <img class="img-fluid ml-md-3" src="img/historia2.jpg" alt="", heigth="300" width="300">
                     </div>
                 </div>
             </div>
@@ -268,8 +304,8 @@
     <div class="container-fluid bg-gallery" id="galeria" style="padding: 120px 0; margin: 90px 0;">
         <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Galería</h6>
-            <h1 class="font-secondary display-4 text-white">Nuestras Fotos</h1>
-            <i class="far fa-heart text-white"></i>
+            <h1 class="font-secondary display-4 text-galeria">Nuestras Fotos</h1>
+            <i class="far fa-heart corazon-galeria"></i>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6 text-center">
@@ -414,8 +450,14 @@
                                 </div>
 
                                 <div class="form-group col-sm-6">
-                                    <input name="alergias" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Alergias"/>
+                                    <!--<input name="alergias" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Indica si quieres un menú vegano o celíaco"/>-->
+                                    <select class="form-control bg-secondary border-0" style="height: 48px;">
+                                        <option>Quiero menú normal</option>
+                                        <option>Quiero menú para veganos</option>
+                                        <option>Quiero menú para celiacos</option>
+                                    </select>
                                 </div>
+                                
                                 <!---
                                 <div class="form-group col-sm-6">
                                     <select class="form-control bg-secondary border-0" style="height: 52px;">
@@ -425,6 +467,9 @@
                                     </select>
                                 </div>
                                 -->
+                            </div>
+                            <div class="form-group">
+                                <input name="alergias" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Alergias o Intolerancias"/>
                             </div>
                             <div class="form-group">
                                 <textarea name="message" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Mensaje"></textarea>
@@ -444,10 +489,10 @@
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white py-5" id="contacto" style="margin-top: 90px;">
-        <div class="container text-center py-5">
+        <div class="container barra-footer py-5">
             <div class="section-title position-relative text-center">
                 <h1 class="font-secondary display-3 text-white">¡Gracias por acompañarnos en esta aventura!</h1>
-                <i class="far fa-heart text-white"></i>
+                <i class="far fa-heart corazon-footer"></i>
             </div>
             <!--
             <div class="d-flex justify-content-center mb-4">

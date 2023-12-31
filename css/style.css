@@ -6,6 +6,13 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --secuoya: #855451; /* MMC COLORES QUE NOS GUSTAN */
+  --rosa_perlado: #B44C43;
+  --rojo_veneciano: #9b5e4f;
+  --rojo_viejo: #d36e70;
+  --rosa_perlado: #d44c43;
+  --dorado: #D4AF37;
+  --dorado_pulsar: #bb920d;
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -364,7 +371,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-weight: 600;
   line-height: 1.2;
-  color: #121F38; /* MMC COLOR DE FUENTE (ANTES DE CORAZON) */
+  color: var(--rojo_veneciano); /* MMC COLOR DE FUENTE (ANTES DE CORAZON) */
 }
 
 h1, .h1 {
@@ -2372,34 +2379,34 @@ fieldset:disabled a.btn {
 
 .btn-primary { /* MMC COLOR DE LOS BOTONES DEL CARROUSEL DE INICIO */
   color: #fff;
-  background-color: #E47A2E;
-  border-color: #E47A2E;
+  background-color: #D4AF37;
+  border-color: #D4AF37;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #d1671b;
-  border-color: #c5611a;
+  background-color: #D4AF37;
+  border-color: #D4AF37;
 }
 
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #d1671b;
-  border-color: #c5611a;
+  background-color: #D4AF37;
+  border-color: #D4AF37;
   box-shadow: 0 0 0 0.2rem rgba(232, 142, 77, 0.5);
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #E47A2E;
-  border-color: #E47A2E;
+  background-color: #D4AF37;
+  border-color: #D4AF37;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #c5611a;
-  border-color: #ba5c18;
+  background-color: #bb920d; /* MMC COLOR DE LOS COLORES DEL CARROUSEL AL PULSAR */
+  border-color: #bb920d;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -2666,36 +2673,36 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(54, 65, 86, 0.5);
 }
 
-.btn-outline-primary {
-  color: #E47A2E;
-  border-color: #E47A2E;
+.btn-outline-primary { /* MMC COLOR DEL SCROLL TO TOP */
+  color: var(--dorado);
+  border-color: var(--dorado);
 }
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #E47A2E;
-  border-color: #E47A2E;
+  background-color: var(--dorado);
+  border-color: var(--dorado);
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(228, 122, 46, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--dorado)
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-  color: #E47A2E;
+  color: var(--dorado);
   background-color: transparent;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
   color: #fff;
-  background-color: #E47A2E;
-  border-color: #E47A2E;
+  background-color: var(--dorado_pulsar);
+  border-color: var(--dorado_pulsar);
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(228, 122, 46, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--dorado);
 }
 
 .btn-outline-secondary {
@@ -6171,7 +6178,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #121F38 !important; /* MMC COLOR DEL BACKGROUND */
+  background-color: var(--rojo_veneciano)  !important; /* MMC COLOR DEL BACKGROUND */
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -6229,7 +6236,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-  border-color: #E47A2E !important;
+  border-color: var(--dorado) !important;
 }
 
 .border-secondary {
@@ -9190,7 +9197,15 @@ button.bg-dark:focus {
 
 .text-center {
   text-align: center !important;
-  color: #dc3545 /* MMC COLOR DE LA DESCRIPCION DE LOS NOVIOS Y DEL FORMULARIO */
+  color: var(--rojo_veneciano) /* MMC COLOR DE LA DESCRIPCION DE LOS NOVIOS Y DEL FORMULARIO */
+}
+
+.barra-footer {
+  color: var(--dorado)
+}
+
+.corazon-footer {
+  color: var(--dorado)
 }
 
 .text-top {
@@ -9286,8 +9301,16 @@ button.bg-dark:focus {
   color: #fff !important; /* MMC COLOR DE FUENTE DE TODAS LAS LETRAS BLANCAS DE LA WEB */
 }
 
+.corazon-galeria {
+  color: var(--rojo_veneciano)
+}
+
+.text-galeria {
+  color: var(--rojo_veneciano)
+}
+
 .text-primary {
-  color: #E47A2E !important; /* MMC COLOR DE FUENTE DE TITULO DE SECCION (ORIFINALMENTE NARANJA) */
+  color: #D4AF37 !important; /* MMC COLOR DE FUENTE DE TITULO DE SECCION (ORIgINALMENTE NARANJA) */
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9343,7 +9366,7 @@ a.text-light:hover, a.text-light:focus {
 }
 
 .text-dark {
-  color: #121F38 !important; /* MMC COLOR DE LOS CORAZONES PEQUEÑOS */
+  color: var(--rojo_veneciano) !important; /* MMC COLOR DE LOS CORAZONES PEQUEÑOS */
 }
 
 a.text-dark:hover, a.text-dark:focus {
@@ -9550,7 +9573,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #E47A2E; /* MMC COLOR DE FUENTE LA BARRA DE INICIO. COLOR SECUNDARIO (ORIGINALMENTE NARANJA)*/
+  color: #D4AF37; /* MMC COLOR DE FUENTE LA BARRA DE INICIO. COLOR SECUNDARIO (ORIGINALMENTE NARANJA)*/
 }
 
 @media (max-width: 991.98px) {
@@ -9579,7 +9602,7 @@ a.text-dark:hover, a.text-dark:focus {
   height: 2px;
   bottom: 11px;
   left: calc(50% - 80px);
-  background: #E47A2E; /* MMC COLOR DE LAS BARRAS SEPARADORAS DE LOS CORAZONES DE LOS NOVIOS IZQUIERDA */
+  background: var(--dorado); /* MMC COLOR DE LAS BARRAS SEPARADORAS DE LOS CORAZONES DE LOS NOVIOS IZQUIERDA */
 }
 
 .section-title::after {
@@ -9589,7 +9612,7 @@ a.text-dark:hover, a.text-dark:focus {
   height: 2px;
   bottom: 11px;
   right: calc(50% - 80px);
-  background: #E47A2E; /* MMC COLOR DE LAS BARRAS SEPARADORAS DE LOS CORAZONES DE LOS NOVIOS DERECHA */
+  background: var(--dorado); /* MMC COLOR DE LAS BARRAS SEPARADORAS DE LOS CORAZONES DE LOS NOVIOS DERECHA */
 }
 
 .btn-play {
@@ -9643,7 +9666,7 @@ a.text-dark:hover, a.text-dark:focus {
   width: 0;
   height: 0;
   left: -1px;
-  border-left: 16px solid #E47A2E; /* MMC BOTON DE PLAY VIDEO */
+  border-left: 16px solid #D4AF37; /* MMC BOTON DE PLAY VIDEO */
   border-top: 11px solid transparent;
   border-bottom: 11px solid transparent;
 }
@@ -9698,7 +9721,7 @@ a.text-dark:hover, a.text-dark:focus {
     bottom: 0;
     left: 50%;
     margin-left: -1px;
-    background: #E47A2E; /* MMC BARRAS VERTICALES DE LOS MOMENTOS */
+    background: var(--dorado); /* MMC BARRAS VERTICALES DE LOS MOMENTOS */
   }
   .timeline .row::before {
     content: "";
@@ -9707,8 +9730,8 @@ a.text-dark:hover, a.text-dark:focus {
     height: 30px;
     top: calc(50% - 15px);
     left: calc(50% - 15px);
-    background: #FFFFFF; /* MMC FONDO DEL PEQUEÑO ROMBO DE LOS MOMENTOS */
-    border: 2px solid #E47A2E; /* MMC PEQUEÑO ROMBO DE LOS MOMENTOS */
+    background: #fff; /* MMC FONDO DEL PEQUEÑO ROMBO DE LOS MOMENTOS */
+    border: 2px solid var(--rojo_veneciano); /* MMC PEQUEÑO ROMBO DE LOS MOMENTOS */
     transform: rotate(45deg);
     z-index: 1;
   }
@@ -9719,7 +9742,7 @@ a.text-dark:hover, a.text-dark:focus {
     position: absolute;
     top: calc(50% - 10px);
     left: calc(50% - 8px);
-    color: #E47A2E; /* MMC PEQUEÑO CORAZON DE LOS MOMENTOS */
+    color: var(--rojo_veneciano); /* MMC PEQUEÑO CORAZON DE LOS MOMENTOS */
     z-index: 2;
   }
 }
@@ -9757,7 +9780,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .bg-gallery {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/galeria_fondo.jpg), no-repeat center center;
+  /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/galeria6.jpg), no-repeat center center;*/
+  background-color: var(--secuoya);
   background-size: cover;
 }
 
@@ -9780,7 +9804,7 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #E47A2E;
+  color: var(--dorado);
   background: #FFFFFF;
   font-size: 30px;
 }
@@ -9820,7 +9844,7 @@ a.text-dark:hover, a.text-dark:focus {
 .circle {
   width: 150px;
   height: 150px;
-  background-color: #fff;
+  background-color: #fff; /* MMC COLOR DE LA CUENTA ATRAS (FONDO) */
   border-radius: 50%;
   margin: 0 30px;
   animation: pulse 2.5s infinite;
@@ -9828,7 +9852,7 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
-  color: #E47A2E;
+  color: #D4AF37; /* MMC COLOR DE LA CUENTA ATRAS (NUMEROS Y LETRAS. NO FONDO) */
   opacity: 0.5;
 }
 

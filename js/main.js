@@ -118,6 +118,7 @@
 
 // Set the wedding date (year, month (0-11), day, hour, minute, second)
 const weddingDate = new Date(2025, 9, 11, 12, 0, 0); // Adjust the date and time accordingly
+//const weddingDate = new Date(2023, 11, 31, 13, 21, 0); // Adjust the date and time accordingly
 
 function updateCountdown() {
     const currentDate = new Date();
@@ -184,9 +185,9 @@ function updateCountdown() {
 
     } else {
     // If the wedding date has passed
-    document.getElementById('countdown-container1').innerHTML = 'It\'s Wedding Day!';
-    document.getElementById('countdown-container2').innerHTML = 'It\'s Wedding Day!';
-    document.getElementById('countdown-container3').innerHTML = 'It\'s Wedding Day!';
+    document.getElementById('countdown-container1').innerHTML = '¡Llegó el gran día!';
+    document.getElementById('countdown-container2').innerHTML = '¡Llegó el gran día!';
+    document.getElementById('countdown-container3').innerHTML = '¡Llegó el gran día!';
     }
 }
 
