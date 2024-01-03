@@ -374,6 +374,40 @@ h1, h2, h3, h4, h5, h6,
   color: var(--rojo_veneciano); /* MMC COLOR DE FUENTE (ANTES DE CORAZON) */
 }
 
+.titulo-timeline {
+  color: var(--dorado);
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+.fecha-timeline {
+  color: var(--rojo_veneciano);
+  font-family: 'Montserrat', cursive;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.descripcion-timeline {
+  color: #000;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.titulo-sobre_nosotros { /* MMC COLOR DEL TITULO SOBRE NOSOTROS */
+  color: var(--dorado);
+}
+
+.descripcion-sobre_nosotros { /* MMC COLOR DE LA DESCRIPCION SOBRE NOSOTROS */
+  color: var(--rojo_veneciano);
+}
+
+.font-secondary-firma { /* MMC FIRMA DE LOS NOVIOS EN "SOBRE NOSOTROS" */
+  font-family: 'Great Vibes', cursive;
+  color: #000;
+}
+
 h1, .h1 {
   font-size: 2.5rem;
 }
@@ -1894,12 +1928,16 @@ pre code {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #818491; /* MMC COLOR DE LAS LETRAS DEL FORMULARIO SELECCION */
   background-color: #fff;
   background-clip: padding-box;
   border: 2px solid #ced4da;
   border-radius: 0;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control.placeholder {
+  color: #000;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1923,7 +1961,7 @@ pre code {
   background-color: #fff;
   border-color: #f3c29f;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(228, 122, 46, 0.25);
+  box-shadow: 0 0 0 0.2rem var(--dorado); /* MMC SOMBREADO DE LA CAJA DE FORMULARIO */
 }
 
 .form-control::placeholder {
@@ -6118,7 +6156,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #EDF5F7 !important;
+  background-color: #EDF5F7 !important; /* MMC COLOR DEL BACKGROUND DE LAS CAJAS DE TEXTOS */
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -6178,7 +6216,15 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: var(--rojo_veneciano)  !important; /* MMC COLOR DEL BACKGROUND */
+  background-color: var(--rojo_veneciano)  !important;
+}
+
+.bg-dark-navbar { /* MMC COLOR DEL NAVBAR DE ARRIBA */
+  background-color: var(--rojo_veneciano);
+}
+
+.bg-dark-footer { /* MMC COLOR DEL FOOTER */
+  background-color: var(--rojo_veneciano);
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -7580,8 +7626,7 @@ button.bg-dark:focus {
   padding: 1.5rem !important;
 }
 
-.pt-4,
-.form-control {
+.pt-4 {
   padding-top: 1.5rem !important;
 }
 
@@ -9301,6 +9346,10 @@ button.bg-dark:focus {
   color: #fff !important; /* MMC COLOR DE FUENTE DE TODAS LAS LETRAS BLANCAS DE LA WEB */
 }
 
+.text-footer {
+  color: var(--dorado_pulsar)
+}
+
 .corazon-galeria {
   color: var(--rojo_veneciano)
 }
@@ -9383,7 +9432,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .custom-margin {
   margin-top: -75px;
-  color: #fff
+  color: var(--rojo_veneciano) /* MMC COLOR DE LA DESCRIPCION DE LA GALERIA */
 }
 
 .text-black-50 {
@@ -9779,9 +9828,9 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 1;
 }
 
-.bg-gallery {
+.bg-gallery { /* MMC AQUI SE CONTROLA EL FONDO DE LA GALERIA */
   /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/galeria6.jpg), no-repeat center center;*/
-  background-color: var(--secuoya);
+  background-color: #EDF5F7; /* ANTERIORMENTE SECUOYA */
   background-size: cover;
 }
 
@@ -9825,6 +9874,8 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
 }
 
 #countdown-container2 {
@@ -9832,6 +9883,8 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
 }
 
 #countdown-container3 {
@@ -9839,21 +9892,23 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
 }
 
 .circle {
   width: 150px;
   height: 150px;
-  background-color: #fff; /* MMC COLOR DE LA CUENTA ATRAS (FONDO) */
+  background-color: rgba(255, 255, 255, 0.3); /* MMC COLOR DE LA CUENTA ATRAS (FONDO) */
   border-radius: 50%;
   margin: 0 30px;
   animation: pulse 2.5s infinite;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
-  color: #D4AF37; /* MMC COLOR DE LA CUENTA ATRAS (NUMEROS Y LETRAS. NO FONDO) */
-  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: rgba(212, 175, 55, 1); /* MMC COLOR DE LA CUENTA ATRAS (NUMEROS Y LETRAS. NO FONDO) */
 }
 
 @keyframes pulse {
