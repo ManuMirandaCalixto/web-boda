@@ -1,0 +1,103 @@
+<!DOCTYPE html> <!-- ESTO NO SE ESCRIBE EN LA CADENA PARA EL PHP -->
+<html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <title>Agradecimientos</title>
+      <style>
+        body {
+          font-family: "Arial", sans-serif;
+          background-color: #3c1fdb;
+          color: #333;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .container {
+          max-width: 600px;
+          margin: 30px auto;
+          /* background-image: url(C:\Users\Manuel\Desktop\BODA\marimanu\git\web-boda\img\galeria5.jpg); */
+          background-color: #9b5e4f;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+          color: #D4AF37;
+        }
+    
+        p {
+          line-height: 1.6;
+          color: #fff;
+        }
+    
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+        .barra-bonita {
+            margin-bottom: -30px;
+        }
+
+        .barra-bonita::before {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 2px;
+            bottom: 11px;
+            left: calc(50% - 80px);
+            background: #D4AF37;
+        }
+
+        .barra-bonita::after {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 2px;
+            bottom: 11px;
+            right: calc(50% - 80px);
+            background: #D4AF37;
+        }
+        
+        .position-relative {
+            position: relative !important;
+        }
+
+        .center-item {
+            text-align: center !important;
+        }
+
+        .p-f {
+            color:#fff;
+        }
+
+        .corazon-color {
+            color: #fff;
+        }
+        
+        .correo {
+            color: #D4AF37;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>¡Muchas gracias por apuntarte!</h1>
+        <p>Hola <?php echo $nombre; ?>,</p>
+        <p>has decidido acompañarnos en esta aventura y tendremos en cuenta tus preferencias.</p>
+        <p>¡¡Te esperamos!!</p>
+
+        <div class="barra-bonita position-relative center-item">
+            <i class="far fa-heart corazon-color"></i>
+        </div>
+        
+        <div class="footer">
+            <p class="p-f"><br> Manu y Mayka<br> <a class="correo" href="mailto:labodademarimanu@gmail.com">labodademarimanu@gmail.com</a></p>
+        </div>
+
+      </div>
+    </body>
+    </html>

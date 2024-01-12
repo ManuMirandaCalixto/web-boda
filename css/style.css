@@ -382,14 +382,14 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .fecha-timeline {
-  color: var(--rojo_veneciano);
-  font-family: 'Montserrat', cursive;
+  color: #000;
+  font-family: 'Montserrat';
   font-size: 15px;
   font-weight: normal;
 }
 
 .descripcion-timeline {
-  color: #000;
+  color: var(--rojo_veneciano);
   font-family: 'Montserrat';
   font-size: 20px;
   font-weight: normal;

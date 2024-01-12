@@ -9,9 +9,11 @@ require 'SMTP.php';
 
 $name_id = $_POST["id_invitado"];
 $name = $_POST["name"];
-$tel = $_POST["tel"];
 $email = $_POST["email"];
+$tel = $_POST["tel"];
 $alergias = $_POST["alergias"];
+$menu = $_POST["menu"];
+$bus = $_POST["bus"];
 $message = $_POST["message"];
 
 if (!$name AND !$tel AND !$alergias AND !$message)
@@ -26,14 +28,14 @@ else
     $email_user =  'labodademarimanu@gmail.com';
     $email_password = 'xyezoplpanknutbu';
 
-    $subject_dest = "¡Formulario enviado con éxito!";
-    $subject_marimanu = "Formulario de $name";
+    $subject_dest = "¡Gracias por inscribirte!"; // Mensaje de titulo del correo al destinatario
+    $subject_marimanu = "Formulario de $name"; // Mensaje de titulo del correo marimanu
 
-    $address_to_dest = $email;
-    $address_to_marimanu = 'labodademarimanu@gmail.com';
+    $address_to_dest = $email; // Direccion de correo del destinatario
+    $address_to_marimanu = 'labodademarimanu@gmail.com'; // Direccion de correo marimanu
 
-    $from_name_dest = '¡Hola!';
-    $from_name_marimanu = 'boda';
+    $from_name_dest = 'Dest';
+    $from_name_marimanu = 'Marimanu';
 
     $phpmailer_dest = new PHPMailer();
     $phpmailer_marimanu = new PHPMailer();
@@ -63,8 +65,8 @@ else
     $phpmailer_dest->addAddress($address_to_dest);
     $phpmailer_marimanu->addAddress($address_to_marimanu);
 
-    $phpmailer_dest->FromName = '¡Hola!';
-    $phpmailer_marimanu->FromName = 'Envío Formulario';
+    $phpmailer_dest->FromName = 'Mayka y Manu'; // Nombre del correo marimanu reflejado en el correo destinatario
+    $phpmailer_marimanu->FromName = 'Marimanu'; // Nombre del correo marimanu reflejado en el correo marimanu
 
     $phpmailer_dest->Subject = $subject_dest;
     $phpmailer_marimanu->Subject = $subject_marimanu;
@@ -86,16 +88,131 @@ else
         $message = 'No Compartido';
     }
 
-    $body_dest = "papa";
-    $body_marimanu = "Formulario enviado: \n\n Id: $name_id \n Nombre: $name \n Correo: $email \n Teléfono: $tel \n Alergias: $alergias \n Mensaje: $message \n\n MariManu.";
+    $body_dest = '
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <title>Agradecimientos</title>
+      <style>
+        body {
+          font-family: "Arial", sans-serif;
+          background-color: #3c1fdb;
+          color: #333;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .container {
+          max-width: 600px;
+          margin: 30px auto;
+          /* background-image: url(C:\Users\Manuel\Desktop\BODA\marimanu\git\web-boda\img\galeria5.jpg); */
+          background-color: #9b5e4f;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+          color: #D4AF37;
+        }
+    
+        p {
+          line-height: 1.6;
+          color: #fff;
+        }
+    
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+        .barra-bonita {
+            margin-bottom: -30px;
+        }
+
+        .barra-bonita::before {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 2px;
+            bottom: 11px;
+            left: calc(50% - 80px);
+            background: #D4AF37;
+        }
+
+        .barra-bonita::after {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 2px;
+            bottom: 11px;
+            right: calc(50% - 80px);
+            background: #D4AF37;
+        }
+        
+        .position-relative {
+            position: relative !important;
+        }
+
+        .center-item {
+            text-align: left !important;
+        }
+
+        .p-f {
+            color:#fff;
+        }
+
+        .corazon-color {
+            color: #fff;
+        }
+        
+        .correo {
+            color: #D4AF37;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>¡Muchas gracias por apuntarte!</h1>
+        <p>Hola <?php echo $nombre; ?>,</p>
+        <p>has decidido acompañarnos en esta aventura y tendremos en cuenta tus preferencias.</p>
+        <p>¡¡Te esperamos!!</p>
+
+        <div class="barra-bonita position-relative center-item">
+            <i class="far fa-heart corazon-color"></i>
+        </div>
+        
+        <div class="footer">
+            <p class="p-f"><br> Manu y Mayka<br> <a class="correo" href="mailto:labodademarimanu@gmail.com">labodademarimanu@gmail.com</a></p>
+        </div>
+
+      </div>
+    </body>
+    '; // Mensaje en el correo del destinatario
+    $body_marimanu = "
+    Formulario enviado:
+
+    Id: $name_id
+    Nombre: $name
+    Correo: $email
+    Teléfono: $tel
+    Alergias: $alergias
+    Menu: $menu
+    Bus: $bus
+    Mensaje: $message
+
+    MariManu.
+    "; // Mensaje en el correo marimanu
 
     $phpmailer_dest->Body = $body_dest;
-    $phpmailer_marimanu->Body = $body_marimanu;
+    $phpmailer_marimanu->Body = $body_dest; // CAMBIAR EL $BODY_DEST POR $BODY_MARIMANU
 
     $phpmailer_dest->isHTML(True);
-    $phpmailer_marimanu->isHTML(False);
+    $phpmailer_marimanu->isHTML(True); // CAMBIAR A FALSE
 
-    if ($email)
+    if ($email && $email != $address_to_marimanu && $email != "mirandacalixtomanuel@gmail.com" && $email != "maykabizarre@gmail.com" && $email != "antoniocarmen@ghotmail.com")
     {
         $phpmailer_dest->send();
     }
