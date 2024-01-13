@@ -28,7 +28,7 @@ else
     $email_user =  'labodademarimanu@gmail.com';
     $email_password = 'xyezoplpanknutbu';
 
-    $subject_dest = "¡Gracias por inscribirte!"; // Mensaje de titulo del correo al destinatario
+    $subject_dest = "¡La boda de MariManu!"; // Mensaje de titulo del correo al destinatario
     $subject_marimanu = "Formulario de $name"; // Mensaje de titulo del correo marimanu
 
     $address_to_dest = $email; // Direccion de correo del destinatario
@@ -65,8 +65,8 @@ else
     $phpmailer_dest->addAddress($address_to_dest);
     $phpmailer_marimanu->addAddress($address_to_marimanu);
 
-    $phpmailer_dest->FromName = 'Mayka y Manu'; // Nombre del correo marimanu reflejado en el correo destinatario
-    $phpmailer_marimanu->FromName = 'Marimanu'; // Nombre del correo marimanu reflejado en el correo marimanu
+    $phpmailer_dest->FromName = 'Manu y Mayka'; // Nombre del correo marimanu reflejado en el correo destinatario
+    $phpmailer_marimanu->FromName = 'MariManu'; // Nombre del correo marimanu reflejado en el correo marimanu
 
     $phpmailer_dest->Subject = $subject_dest;
     $phpmailer_marimanu->Subject = $subject_marimanu;
@@ -93,7 +93,7 @@ else
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
       <title>Agradecimientos</title>
       <style>
         body {
@@ -124,73 +124,39 @@ else
         }
     
         .footer {
-            margin-top: 20px;
-            font-size: 0.8em;
-        }
-
-        .barra-bonita {
-            margin-bottom: -30px;
-        }
-
-        .barra-bonita::before {
-            position: absolute;
-            content: "";
-            width: 60px;
-            height: 2px;
-            bottom: 11px;
-            left: calc(50% - 80px);
-            background: #D4AF37;
-        }
-
-        .barra-bonita::after {
-            position: absolute;
-            content: "";
-            width: 60px;
-            height: 2px;
-            bottom: 11px;
-            right: calc(50% - 80px);
-            background: #D4AF37;
-        }
-        
-        .position-relative {
-            position: relative !important;
-        }
-
-        .center-item {
-            text-align: left !important;
+          border-top: 1px solid #D4AF37;
+          margin-top: 20px;
+          font-size: 0.8em;
+          padding-top: 10px;
+          font-size: 0.8em;
         }
 
         .p-f {
-            color:#fff;
-        }
-
-        .corazon-color {
-            color: #fff;
+          color:#fff;
         }
         
         .correo {
-            color: #D4AF37;
+          color: #D4AF37;
         }
       </style>
     </head>
     <body>
       <div class="container">
         <h1>¡Muchas gracias por apuntarte!</h1>
-        <p>Hola <?php echo $nombre; ?>,</p>
+        <p>Hola {{name}},</p>
         <p>has decidido acompañarnos en esta aventura y tendremos en cuenta tus preferencias.</p>
         <p>¡¡Te esperamos!!</p>
 
-        <div class="barra-bonita position-relative center-item">
-            <i class="far fa-heart corazon-color"></i>
-        </div>
-        
         <div class="footer">
             <p class="p-f"><br> Manu y Mayka<br> <a class="correo" href="mailto:labodademarimanu@gmail.com">labodademarimanu@gmail.com</a></p>
+            <p> &hearts; </p>
         </div>
 
       </div>
     </body>
+    </html>
     '; // Mensaje en el correo del destinatario
+    $body_dest = str_replace("{{name}}", $name, $body_dest);
     $body_marimanu = "
     Formulario enviado:
 
@@ -207,12 +173,12 @@ else
     "; // Mensaje en el correo marimanu
 
     $phpmailer_dest->Body = $body_dest;
-    $phpmailer_marimanu->Body = $body_dest; // CAMBIAR EL $BODY_DEST POR $BODY_MARIMANU
+    $phpmailer_marimanu->Body = $body_marimanu; // CAMBIAR EL $BODY_DEST POR $BODY_MARIMANU
 
     $phpmailer_dest->isHTML(True);
-    $phpmailer_marimanu->isHTML(True); // CAMBIAR A FALSE
+    $phpmailer_marimanu->isHTML(False); // CAMBIAR A FALSE
 
-    if ($email && $email != $address_to_marimanu && $email != "mirandacalixtomanuel@gmail.com" && $email != "maykabizarre@gmail.com" && $email != "antoniocarmen@ghotmail.com")
+    if ($email && $email != $address_to_marimanu && $email != "mirandacalixtomanuel@gmail.com" && $email == "maykabizarre@gmail.com" && $email != "antoniocarmen@ghotmail.com")
     {
         $phpmailer_dest->send();
     }

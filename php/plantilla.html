@@ -3,7 +3,7 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
       <title>Agradecimientos</title>
       <style>
         body {
@@ -34,68 +34,32 @@
         }
     
         .footer {
-            margin-top: 20px;
-            font-size: 0.8em;
-        }
-
-        .barra-bonita {
-            margin-bottom: -30px;
-        }
-
-        .barra-bonita::before {
-            position: absolute;
-            content: "";
-            width: 60px;
-            height: 2px;
-            bottom: 11px;
-            left: calc(50% - 80px);
-            background: #D4AF37;
-        }
-
-        .barra-bonita::after {
-            position: absolute;
-            content: "";
-            width: 60px;
-            height: 2px;
-            bottom: 11px;
-            right: calc(50% - 80px);
-            background: #D4AF37;
-        }
-        
-        .position-relative {
-            position: relative !important;
-        }
-
-        .center-item {
-            text-align: center !important;
+          border-top: 1px solid #D4AF37;
+          margin-top: 20px;
+          font-size: 0.8em;
+          padding-top: 10px;
+          font-size: 0.8em;
         }
 
         .p-f {
-            color:#fff;
-        }
-
-        .corazon-color {
-            color: #fff;
+          color:#fff;
         }
         
         .correo {
-            color: #D4AF37;
+          color: #D4AF37;
         }
       </style>
     </head>
     <body>
       <div class="container">
         <h1>¡Muchas gracias por apuntarte!</h1>
-        <p>Hola <?php echo $nombre; ?>,</p>
+        <p>Hola {{name}},</p>
         <p>has decidido acompañarnos en esta aventura y tendremos en cuenta tus preferencias.</p>
         <p>¡¡Te esperamos!!</p>
 
-        <div class="barra-bonita position-relative center-item">
-            <i class="far fa-heart corazon-color"></i>
-        </div>
-        
         <div class="footer">
             <p class="p-f"><br> Manu y Mayka<br> <a class="correo" href="mailto:labodademarimanu@gmail.com">labodademarimanu@gmail.com</a></p>
+            <p> &hearts; </p>
         </div>
 
       </div>
