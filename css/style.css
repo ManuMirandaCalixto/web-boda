@@ -9690,7 +9690,7 @@ a.text-dark:hover, a.text-dark:focus {
   height: 60px;
   background: #FFFFFF;
   border-radius: 100%;
-  animation: pulse-border 2500ms ease-out infinite;
+  animation: pulse-border 1500ms ease-out infinite;
 }
 
 .btn-play:after {
@@ -9907,7 +9907,7 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: center;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: rgba(212, 175, 55, 1); /* MMC COLOR DE LA CUENTA ATRAS (NUMEROS Y LETRAS. NO FONDO) */
 }
 

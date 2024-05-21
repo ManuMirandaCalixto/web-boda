@@ -1,7 +1,7 @@
 [
-    {"id": 0, "nombre": "Manuel", "info": "Persona 1", "Confirmacion": 1},
-    {"id": 1, "nombre": "Carlos", "info": "Persona 2", "Confirmacion": 1},
-    {"id": 2, "nombre": "Antonio", "info": "Persona 3", "Confirmacion": 1},
-    {"id": 3, "nombre": "Pepe", "info": "Persona 4", "Confirmacion": 1},
+    {"id": 0, "nombre": "Manuel", "info": "Persona 1", "Confirmacion": 0},
+    {"id": 1, "nombre": "Carlos", "info": "Persona 2", "Confirmacion": 0},
+    {"id": 2, "nombre": "Antonio", "info": "Persona 3", "Confirmacion": 0},
+    {"id": 3, "nombre": "Pepe", "info": "Persona 4", "Confirmacion": 0},
     {"id": 4, "nombre": "el_confirmado", "info": "Persona 5", "Confirmacion": 1}
 ]
