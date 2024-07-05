@@ -62,7 +62,7 @@ function createListItem(item) {
 
     // Agrega un event listener al checkbox para actualizar el placeholder
     checkbox.addEventListener('change', function () {
-        updateValue(item.nombre, checkbox.checked, item.id);
+        updateValue(item.nombre, checkbox.checked, item.id, item.info);
     });
 
     listItem.appendChild(checkbox);
@@ -74,12 +74,14 @@ function createListItem(item) {
     return listItem;
 }
 
-function updateValue(value, isChecked, id) {
+function updateValue(value, isChecked, id, info) {
     const searchInput = document.getElementById('searchInput');
     const searchID = document.getElementById('name_id');
+    const searchINFO = document.getElementById('name_info');
     // Verifica si el checkbox está marcado antes de actualizar el valor de la caja de búsqueda
     if (isChecked) {
         searchInput.value = value;
         searchID.value = id;
+        searchINFO.value = info;
     }
 }

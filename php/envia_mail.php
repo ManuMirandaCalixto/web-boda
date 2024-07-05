@@ -8,6 +8,7 @@ require 'PHPMailer.php';
 require 'SMTP.php';
 
 $name_id = $_POST["id_invitado"];
+$info = $_POST["info_invitado"];
 $name = $_POST["name"];
 $email = $_POST["email"];
 $tel = $_POST["tel"];
@@ -162,6 +163,7 @@ else
 
     Id: $name_id
     Nombre: $name
+    Información: $info
     Correo: $email
     Teléfono: $tel
     Alergias: $alergias
@@ -178,7 +180,7 @@ else
     $phpmailer_dest->isHTML(True);
     $phpmailer_marimanu->isHTML(False); // CAMBIAR A FALSE
 
-    if ($email && $email != $address_to_marimanu && $email != "mirandacalixtomanuel@gmail.com" && $email == "maykabizarre@gmail.com" && $email != "antoniocarmen@ghotmail.com")
+    if ($email && $email != $address_to_marimanu && $email != "mirandacalixtomanuel@gmail.com" && $email != "maykabizarre@gmail.com" && $email != "antoniocarmen@ghotmail.com")
     {
         $phpmailer_dest->send();
     }
