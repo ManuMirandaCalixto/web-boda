@@ -9347,7 +9347,7 @@ button.bg-dark:focus {
 }
 
 .text-footer {
-  color: var(--dorado_pulsar)
+  color: var(--white) /* MMC COLRO DE FUENTE DEL FOOTER */
 }
 
 .corazon-galeria {
