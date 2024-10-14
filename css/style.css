@@ -9865,11 +9865,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 
-
-
-
-
-#countdown-container1 {
+#countdown-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9878,22 +9874,17 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 60px;
 }
 
-#countdown-container2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  font-family: 'Great Vibes', cursive;
-  font-size: 60px;
+.countdown-value {
+  display: block; /* Hace que el número esté en una línea separada */
+  font-size: 36px; /* Ajusta el tamaño de la fuente según prefieras */
+  font-weight: bold;
 }
 
-#countdown-container3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  font-family: 'Great Vibes', cursive;
-  font-size: 60px;
+.countdown-label {
+  display: block; /* Asegura que el texto "Días", "Horas", etc. esté en una nueva línea */
+  font-size: 16px; /* Tamaño más pequeño para el texto descriptivo */
+  text-transform: uppercase;
+  margin-top: 5px; /* Añade un pequeño espacio entre el número y el texto */
 }
 
 .circle {
@@ -9910,6 +9901,61 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 20px;
   color: rgba(212, 175, 55, 1); /* MMC COLOR DE LA CUENTA ATRAS (NUMEROS Y LETRAS. NO FONDO) */
 }
+
+
+
+/* Estilo en pantallas pequeñas (2x2 con Grid) */
+@media (max-width: 768px) {
+  #countdown-container {
+      display: grid; /* Usamos grid para organizar los círculos */
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+      grid-gap: 10px; /* Espacio entre los círculos */
+      justify-items: center; /* Centrar los círculos dentro de las celdas */
+      align-items: center; /* Alinear los círculos verticalmente en el centro */
+  }
+
+  .circle {
+      margin: 0; /* Sin margen extra en móviles */
+  }
+
+  .countdown-value {
+      font-size: 24px; /* Reducir el tamaño de la fuente en móviles */
+  }
+
+  .countdown-label {
+      font-size: 12px; /* Reducir el tamaño de la fuente de la etiqueta */
+      margin-top: 2px; /* Espacio menor entre el valor y la etiqueta */
+  }
+}
+
+
+/* Estilo en pantallas muy pequeñas (como teléfonos móviles en modo retrato) */
+@media (max-width: 480px) {
+  .circle {
+      width: 50px; /* Reducir el tamaño del círculo */
+      height: 50px; /* Ajustar el tamaño del círculo */
+      margin: 0 3px; /* Reducir más el margen entre círculos */
+  }
+
+  .countdown-value {
+      font-size: 18px; /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
+  }
+
+  .countdown-label {
+      font-size: 10px; /* Reducir aún más el tamaño de la fuente de la etiqueta */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes pulse {
   0% {

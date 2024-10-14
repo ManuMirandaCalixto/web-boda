@@ -115,6 +115,7 @@
 
 
 
+/*
 
 // Set the wedding date (year, month (0-11), day, hour, minute, second)
 const weddingDate = new Date(2025, 9, 11, 12, 0, 0); // Adjust the date and time accordingly
@@ -196,3 +197,5 @@ setInterval(updateCountdown, 1000);
 
 // Initial call to set the countdown
 updateCountdown();
+
+*/
