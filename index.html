@@ -7,7 +7,7 @@
     <meta content = "width=device-width, initial-scale=1.0" name = "viewport">
     
     <!-- Icon --> <!-- FIXME -->
-    <link href = "img/icon.ico" rel = "icon">
+    <link href = "img/ico/icon.ico" rel = "icon">
 
     <!-- Google Web Fonts -->
     <link rel = "preconnect" href = "https://fonts.gstatic.com">
@@ -72,7 +72,6 @@
                 </div>
             </a>
         </div>
-        
         <script src="js/carousel.js"></script>
     </div>
     <!-- Carousel End -->    
@@ -97,77 +96,13 @@
 
     <!-- Los Novios Start --></body>
     <div class="container-fluid py-5" id="novios">
-        <div class="container py-5">
+        <div class="container py-5" id="novios-items">
             <div class="section-title position-relative text-center">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Sobre Nosotros</h6>
                 <h1 class="font-secondary display-4">El novio y la novia (y la gata)</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
-                <div class="col-md-6 p-0 text-center text-md-right">
-                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
-                        <h3 class="titulo-sobre_nosotros mb-3">Manuel Miranda Calixto</h3>
-                        <p class="descripcion-sobre_nosotros">.</p>
-                        <h3 class="font-secondary-firma font-weight-normal mb-3"><i class="fa text-primary pr-3"></i>Manu</h3>
-                        
-                        <!--
-                        <div class="position-relative">
-                            FIXME Redes Sociales Manu
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                        -->
-                    </div>
-                </div>
-                <div class="col-md-6 p-0" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/nosotros/novio1.jpg" style="object-fit: cover;" height="500" width="600">
-                </div>
-            </div>
-            <div class="row m-0">
-                <div class="col-md-6 p-0" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/nosotros/novia1.jpg" style="object-fit: cover;" height="500" width="600">
-                </div>
-                <div class="col-md-6 p-0 text-center text-md-left">
-                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
-                        <h3 class="titulo-sobre_nosotros mb-3">Mayka Souto Villegas</h3>
-                        <p class="descripcion-sobre_nosotros">Tiene por costumbre inventarse canciones y bailar cuando se encuentra feliz, y de alguna forma u otra siempre consigue que se me pegue algo de esa alegría que tiene. Es verdad que también es bastante cabezota, pero siempre transmite entusiasmo y felicidad allá por donde pasa. En definitiva la quiero muchísimo, y no puedo estar más contento de compartir la vida con ella.</p>
-                        <h3 class="font-secondary-firma font-weight-normal mb-3"><i class="fa text-primary pr-3"></i>Mayka</h3>
-                        <!--
-                        <div class="position-relative">
-                            FIXME Redes Sociales Mayka
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                        -->
-                    </div>
-                </div>
-            </div>
-            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
-                <div class="col-md-6 p-0 text-center text-md-right">
-                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
-                        <h3 class="titulo-sobre_nosotros mb-3">La Pepi</h3>
-                        <p class="descripcion-sobre_nosotros">Soy Pepi. Mis papás se van a casar, y aunque no puedo ir a la boda soy parte de la familia y por eso tengo un espacio especial.</p>
-                        <h3 class="font-secondary-firma font-weight-normal mb-3"><i class="fa text-primary pr-3"></i>Pepi</h3>
-                        
-                        <!--
-                        <div class="position-relative">
-                            FIXME Redes Sociales Manu
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                        -->
-                    </div>
-                </div>
-                <div class="col-md-6 p-0" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/nosotros/historia3.jpg" style="object-fit: cover;" height="500" width="600">
-                </div>
-            </div>
+            <script src="js/novios.js"></script>
         </div>
     </div>
     <!-- Los Novios End -->
@@ -180,85 +115,15 @@
                 <h1 class="font-secondary display-4">Mejores Momentos</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="container timeline position-relative p-0">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-right">
-                        <img class="img-fluid mr-md-3" src="img/historia/historia1.jpg" alt="", heigth="300" width="300">
-                    </div>
-                    <div class="col-md-6 text-center text-md-left">
-                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-                            <h4 class="titulo-timeline mb-2">Primera cita oficial</h4>
-                            <!--<h5 class="fecha-timeline mb-2">Diciembre de 2017</h5>-->
-                            <h6 class=" descripcion-timeline m-0">Una tarde de diciembre de 2017 quedó inmortalizada nuestra primera foto como pareja</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-right">
-                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-                            <h4 class="titulo-timeline mb-2">papas (14/1/2015)</h4>
-                            <p class="text-uppercase mb-2">Fecha año 2</p>
-                            <p class="m-0">Descripción año 2</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-center text-md-left">
-                        <img class="img-fluid ml-md-3" src="img/historia/historia2.jpg" alt="", heigth="300" width="300">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-right">
-                        <img class="img-fluid mr-md-3" src="img/historia/historia3.jpg" alt="", heigth="300" width="300">
-                    </div>
-                    <div class="col-md-6 text-center text-md-left">
-                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-                            <h4 class="titulo-timeline mb-2">Año 3</h4>
-                            <p class="text-uppercase mb-2">Fecha año 3</p>
-                            <p class="m-0">Descripción año 3</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-right">
-                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-                            <h4 class="titulo-timeline mb-2">Año 4</h4>
-                            <p class="text-uppercase mb-2">Fecha año 4</p>
-                            <p class="m-0">Descripción año 4</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-center text-md-left">
-                        <img class="img-fluid ml-md-3" src="img/historia/historia2.jpg" alt="", heigth="300" width="300">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-right">
-                        <img class="img-fluid mr-md-3" src="img/historia/historia3.jpg" alt="", heigth="300" width="300">
-                    </div>
-                    <div class="col-md-6 text-center text-md-left">
-                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-                            <h4 class="titulo-timeline mb-2">Año 5</h4>
-                            <p class="text-uppercase mb-2">Fecha año 5</p>
-                            <p class="m-0">Descripción año 5</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-right">
-                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-                            <h4 class="titulo-timeline mb-2">Año 6</h4>
-                            <p class="text-uppercase mb-2">Fecha año 6</p>
-                            <p class="m-0">Descripción año 6</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-center text-md-left">
-                        <img class="img-fluid ml-md-3" src="img/historia/historia2.jpg" alt="", heigth="300" width="300">
-                    </div>
-                </div>
+            <div class="container timeline position-relative p-0" id="historia-items">
+                <script src="js/historia.js"></script>
             </div>
         </div>
     </div>
     <!-- Nuestra Historia End -->
 
     <!-- Galeria Start -->
+    <link href="css/galeria_carousel.css" rel="stylesheet">
     <div class="container-fluid bg-gallery" id="galeria" style="padding: 120px 0; margin: 90px 0;">
         <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Galería</h6>
@@ -270,61 +135,8 @@
                 <h5 class="font-weight-normal custom-margin mb-9 pb-9">Es dificil resumir casi ocho años de relación y buenos momentos, así que dejaremos solo algunas fotos (son 600).</h5>
             </div>
         </div>
-        <div class="owl-carousel gallery-carousel">
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/galeria/galeria1.jpg" alt="" height="400" width="400">
-                <a href="img/galeria/galeria1.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/galeria/galeria2.jpg" alt="" height="400" width="400">
-                <a href="img/galeria/galeria2.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/galeria/galeria3.jpg" alt="" height="400" width="400">
-                <a href="img/galeria/galeria3.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/galeria/galeria4.jpg" alt="" height="400" width="400">
-                <a href="img/galeria/galeria4.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/galeria/galeria5.jpg" alt="" height="400" width="400">
-                <a href="img/galeria/galeria5.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/galeria/galeria6.jpg" alt="" height="400" width="400">
-                <a href="img/galeria/galeria6.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/galeria/galeria7.jpg" alt="" height="400" width="400">
-                <a href="img/galeria/galeria7.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/galeria/galeria8.jpg" alt="" height="400" width="400">
-                <a href="img/galeria/galeria8.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
-            <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/galeria/galeria9.jpg" alt="" height="400" width="400">
-                <a href="img/galeria/galeria9.jpg" data-lightbox="gallery">
-                    <i class="fa fa-2x fa-plus text-white"></i>
-                </a>
-            </div>
+        <div class="galeria-carousel-container" id="galeria-items">
+            <script src="js/galeria.js"></script>
         </div>
     </div>
     <!-- Galeria End -->
@@ -497,7 +309,6 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
