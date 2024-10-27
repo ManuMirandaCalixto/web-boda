@@ -17,37 +17,19 @@
 /* Limitar el ancho del carrusel y añadir márgenes */
 .galeria-carousel-container {
     max-width: 100%; /* El carrusel ocupará el 100% del ancho disponible */
-    margin: 40px auto; /* Centramos el carrusel horizontalmente con margen arriba/abajo */
+    margin: auto;
+    margin-top: -5%; /* Centramos el carrusel horizontalmente con margen arriba/abajo */
     padding: 0 20px; /* Añadir espacio interno a los lados */
     position: relative; /* Para controlar el posicionamiento de los botones */
+ 
 }
 
-/* Ajustes para pantallas grandes */
-@media (min-width: 1200px) {
-    .galeria-carousel-container {
-        max-width: 80%; /* Carrusel ocupará el 80% del ancho en pantallas grandes */
-    }
-}
-
-/* Ajustes para pantallas medianas */
-@media (min-width: 768px) and (max-width: 1199px) {
-    .galeria-carousel-container {
-        max-width: 90%; /* 90% del ancho en pantallas medianas */
-    }
-}
-
-/* Ajustes para pantallas pequeñas (móviles) */
-@media (max-width: 767px) {
-    .galeria-carousel-container {
-        max-width: 95%; /* 95% del ancho en pantallas pequeñas */
-    }
-}
 
 /* Estilos para colocar los botones de control más arriba, más juntos y más elegantes */
 .galeria-carousel-container .carousel-control-prev,
 .galeria-carousel-container .carousel-control-next {
     position: absolute;
-    top: -70px; /* Mueve los botones hacia arriba */
+    top: -10%; /* Mueve los botones hacia arriba */
     width: 50px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
@@ -63,7 +45,6 @@
 /* Ajustes para la posición de los botones */
 .galeria-carousel-container .carousel-control-prev {
     left: 45%; /* Botón de "Anterior" más cerca del centro */
-    /* top: -25%; REVISAR */
 }
 
 .galeria-carousel-container .carousel-control-next {
@@ -82,4 +63,44 @@
 .galeria-carousel-container .carousel-control-next:hover {
     background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro al pasar el mouse */
     transform: scale(1.1); /* Agrandar ligeramente los botones */
+}
+
+
+
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1200px) {
+    .galeria-carousel-container {
+        max-width: 80%; /* Carrusel ocupará el 80% del ancho en pantallas grandes */
+    }
+}
+
+/* Ajustes para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .galeria-carousel-container {
+        max-width: 90%; /* 90% del ancho en pantallas medianas */
+    }
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    .galeria-carousel-container .carousel-item {
+        height: 0;
+        padding-top: 100%; /* Relación de aspecto 16:9 */
+        position: relative;
+    }
+    .galeria-carousel-container {
+        max-width: 95%; /* 95% del ancho en pantallas pequeñas */
+    }
+    .galeria-carousel-container .carousel-control-prev,
+    .galeria-carousel-container .carousel-control-next {
+        top: -25%; /* Mueve los botones hacia arriba */
+    }
+    .galeria-carousel-container .carousel-control-prev {
+        left: 20%; /* Botón de "Anterior" más cerca del centro */
+    }
+    
+    .galeria-carousel-container .carousel-control-next {
+        right: 20%; /* Botón de "Siguiente" más cerca del centro */
+    }
 }

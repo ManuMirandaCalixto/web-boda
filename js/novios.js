@@ -2,21 +2,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Datos de los novios
     const noviosData = [
         {
-            imgSrc: "img/nosotros/novio1.jpg",
+            imgSrc: "img/nosotros/novio.jpg",
             name: "Manuel Miranda Calixto",
             description: "Manu es mi lugar seguro, la persona que pone calma y orden a mi vida. Me encanta cómo se emociona al hablar de mates, que combine sus corbatas con mis vestidos y que le haga perrerías a la Pepi. No he podido elegir mejor compañero de vida, tan diferentes pero con algo que nos une, un sentido del humor absurdo que echamos de menos cada vez que nos estamos juntos.",
             signature: "Manu",
             align: "right"
         },
         {
-            imgSrc: "img/nosotros/novia1.jpg",
+            imgSrc: "img/nosotros/novia.jpg",
             name: "Mayka Souto Villegas",
             description: "Tiene por costumbre inventarse canciones y bailar cuando se encuentra feliz, y de alguna forma u otra siempre consigue que se me pegue algo de esa alegría que tiene. Es verdad que también es bastante cabezota, pero siempre transmite entusiasmo y felicidad allá por donde pasa. En definitiva la quiero muchísimo, y no puedo estar más contento de compartir la vida con ella.",
             signature: "Mayka",
             align: "left"
         },
         {
-            imgSrc: "img/nosotros/historia3.jpg",
+            imgSrc: "img/nosotros/pepi.jpg",
             name: "La Pepi",
             description: "Soy Pepi. Mis papás se van a casar, y aunque no puedo ir a la boda soy parte de la familia y por eso tengo un espacio especial.",
             signature: "Pepi",

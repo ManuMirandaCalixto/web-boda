@@ -6282,7 +6282,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-  border-color: var(--dorado) !important;
+  border-color: var(--dorado) !important; /* COLOR DE LA BARRA EN NUESTRO DIA (MMC) */
 }
 
 .border-secondary {
@@ -9347,7 +9347,50 @@ button.bg-dark:focus {
 }
 
 .text-footer {
-  color: var(--white) /* MMC COLRO DE FUENTE DEL FOOTER */
+  color: var(--white) /* MMC COLOR DE FUENTE DEL FOOTER */
+}
+
+
+/* Estilo base para el contenedor (se aplicará en todas las resoluciones) */
+.text-footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-footer {
+  padding: 0 2%; /* Espaciado horizontal */
+}
+
+/* Para pantallas grandes (PC) */
+@media (min-width: 768px) {
+  .text-footer {
+      border-right: 2px solid var(--dorado); /* Separador vertical */
+      padding-right: 2%; /* Añadir espacio después del separador */
+  }
+
+  /* Eliminar el borde del último elemento para no tener un separador innecesario al final */
+  .text-footer:last-child {
+      border-right: none;
+  }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+  .text-footer-container {
+      flex-direction: column; /* Coloca los elementos uno debajo del otro */
+      text-align: center;
+  }
+
+  .text-footer {
+      border-top: 2px solid var(--dorado); /* Separador horizontal */
+      padding-top: 10px; /* Añadir espacio después del separador */
+  }
+
+  /* Eliminar el borde superior del primer elemento */
+  .text-footer:first-child {
+      border-top: none;
+  }
 }
 
 .corazon-galeria {
@@ -9359,7 +9402,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #D4AF37 !important; /* MMC COLOR DE FUENTE DE TITULO DE SECCION (ORIgINALMENTE NARANJA) */
+  color: #D4AF37 !important; /* MMC COLOR DE FUENTE DE TITULO DE SECCION (ORIGINALMENTE NARANJA) */
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9859,7 +9902,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 767.98px) {
-  #event .border-right {
+  #evento .border-right {
     border-right: none !important;
   }
 }
@@ -9909,7 +9952,7 @@ a.text-dark:hover, a.text-dark:focus {
   #countdown-container {
       display: grid; /* Usamos grid para organizar los círculos */
       grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
-      grid-gap: 10px; /* Espacio entre los círculos */
+      grid-gap: 40px; /* Espacio entre los círculos */
       justify-items: center; /* Centrar los círculos dentro de las celdas */
       align-items: center; /* Alinear los círculos verticalmente en el centro */
   }
@@ -9932,29 +9975,19 @@ a.text-dark:hover, a.text-dark:focus {
 /* Estilo en pantallas muy pequeñas (como teléfonos móviles en modo retrato) */
 @media (max-width: 480px) {
   .circle {
-      width: 50px; /* Reducir el tamaño del círculo */
-      height: 50px; /* Ajustar el tamaño del círculo */
+      width: 120px; /* Reducir el tamaño del círculo */
+      height: 120px; /* Ajustar el tamaño del círculo */
       margin: 0 3px; /* Reducir más el margen entre círculos */
   }
 
   .countdown-value {
-      font-size: 18px; /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
+      font-size: 20px; /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
   }
 
   .countdown-label {
-      font-size: 10px; /* Reducir aún más el tamaño de la fuente de la etiqueta */
+      font-size: 15px; /* Reducir aún más el tamaño de la fuente de la etiqueta */
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 @keyframes pulse {
