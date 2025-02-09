@@ -7,8 +7,4 @@ repasar descripciones
 
 GALERIA
 ajustar los botones en pc
-
-NUESTRO DIA
-corregir los saltos de linea
-arreglar los tamaños de las imagenes
-añadir enlace de maps con las ubicaciones
+poner las fotos por orden cronologic

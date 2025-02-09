@@ -66,12 +66,21 @@
 }
 
 
-
-
 /* Ajustes para pantallas grandes */
 @media (min-width: 1200px) {
     .galeria-carousel-container {
         max-width: 80%; /* Carrusel ocupará el 80% del ancho en pantallas grandes */
+    }
+    .galeria-carousel-container .carousel-control-prev,
+    .galeria-carousel-container .carousel-control-next {
+        top: -10%;
+    }
+    .galeria-carousel-container .carousel-control-prev {
+        left: 45%; /* Botón de "Anterior" más cerca del centro */
+    }
+    
+    .galeria-carousel-container .carousel-control-next {
+        right: 45%; /* Botón de "Siguiente" más cerca del centro */
     }
 }
 

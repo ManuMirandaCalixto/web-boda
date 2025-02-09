@@ -9245,6 +9245,10 @@ button.bg-dark:focus {
   color: var(--rojo_veneciano) /* MMC COLOR DE LA DESCRIPCION DE LOS NOVIOS Y DEL FORMULARIO */
 }
 
+.text-height {
+  margin-bottom: 90px !important;
+}
+
 .barra-footer {
   color: var(--dorado)
 }
@@ -10013,7 +10017,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 head-return {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/historia3.jpg), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/return/pepi.jpg), no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;

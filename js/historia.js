@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             imgSrc: "img/historia/historia1.jpg",
             title: "Primera cita oficial",
-            date: "Diciembre de 2017",
+            date: "Noviembre de 2017",
             description: "Después de ese primer beso en el parque y sin saber muy bien cómo iba a salir todo decidimos empezar nuestra aventura juntos que no ha hecho nada más que empezar.",
             align: "left"
         },

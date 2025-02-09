@@ -1,69 +1,76 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Datos de la galería
     const galeriaData = [
-        "img/galeria/galeria1.png",
-        "img/galeria/galeria2.png",
-        "img/galeria/galeria3.png",
-        "img/galeria/galeria4.png",
-        "img/galeria/galeria5.png",
-        "img/galeria/galeria6.png",
-        "img/galeria/galeria7.png",
-        "img/galeria/galeria8.png",
-        "img/galeria/galeria9.png",
-        "img/galeria/galeria10.png",
-        "img/galeria/galeria11.png",
-        "img/galeria/galeria12.png",
-        "img/galeria/galeria13.png",
-        "img/galeria/galeria14.png",
-        "img/galeria/galeria15.png",
-        "img/galeria/galeria16.png",
-        "img/galeria/galeria17.png",
-        "img/galeria/galeria18.png",
-        "img/galeria/galeria19.png",
-        "img/galeria/galeria20.png",
-        "img/galeria/galeria21.png",
-        "img/galeria/galeria22.png",
-        "img/galeria/galeria23.png",
-        "img/galeria/galeria24.png",
-        "img/galeria/galeria25.png",
-        "img/galeria/galeria26.png",
-        "img/galeria/galeria27.png",
-        "img/galeria/galeria28.png",
-        "img/galeria/galeria29.png",
-        "img/galeria/galeria30.png",
-        "img/galeria/galeria31.png",
-        "img/galeria/galeria32.png",
-        "img/galeria/galeria33.png",
-        "img/galeria/galeria34.png",
-        "img/galeria/galeria35.png",
-        "img/galeria/galeria36.png",
-        "img/galeria/galeria37.png",
-        "img/galeria/galeria38.png",
-        "img/galeria/galeria39.png",
-        "img/galeria/galeria40.png",
-        "img/galeria/galeria41.png",
-        "img/galeria/galeria42.png",
-        "img/galeria/galeria43.png",
-        "img/galeria/galeria44.png",
-        "img/galeria/galeria45.png",
-        "img/galeria/galeria46.png",
-        "img/galeria/galeria47.png",
-        "img/galeria/galeria48.png",
-        "img/galeria/galeria49.png",
-        "img/galeria/galeria50.png",
-        "img/galeria/galeria51.png",
-        "img/galeria/galeria52.png",
-        "img/galeria/galeria53.png",
-        "img/galeria/galeria54.png",
-        "img/galeria/galeria55.png"
+        "img/galeria/2017/2017_1.png",
+
+        "img/galeria/2018/2018_1.png",
+        "img/galeria/2018/2018_2.png",
+        "img/galeria/2018/2018_3.png",
+        "img/galeria/2018/2018_4.png",
+        "img/galeria/2018/2018_5.png",
+        "img/galeria/2018/2018_6.png",
+        "img/galeria/2018/2018_7.png",
+        "img/galeria/2018/2018_8.png",
+        "img/galeria/2018/2018_9.png",
+        "img/galeria/2018/2018_10.png",
+        "img/galeria/2018/2018_11.png",
+        "img/galeria/2018/2018_12.png",
+
+        "img/galeria/2019/2019_1.png",
+        "img/galeria/2019/2019_2.png",
+        "img/galeria/2019/2019_3.png",
+        "img/galeria/2019/2019_4.png",
+        "img/galeria/2019/2019_5.png",
+        "img/galeria/2019/2019_6.png",
+        "img/galeria/2019/2019_7.png",
+        "img/galeria/2019/2019_8.png",
+        "img/galeria/2019/2019_9.png",
+        "img/galeria/2019/2019_10.png",
+        "img/galeria/2019/2019_11.png",
+        "img/galeria/2019/2019_12.png",
+
+        "img/galeria/2020/2020_1.png",
+        "img/galeria/2020/2020_2.png",
+        "img/galeria/2020/2020_3.png",
+        "img/galeria/2020/2020_4.png",
+        "img/galeria/2020/2020_5.png",
+        "img/galeria/2020/2020_6.png",
+
+        "img/galeria/2021/2021_1.png",
+        "img/galeria/2021/2021_2.png",
+        "img/galeria/2021/2021_3.png",
+        "img/galeria/2021/2021_4.png",
+
+        "img/galeria/2022/2022_1.png",
+        "img/galeria/2022/2022_2.png",
+        "img/galeria/2022/2022_3.png",
+        "img/galeria/2022/2022_4.png",
+        "img/galeria/2022/2022_5.png",
+        "img/galeria/2022/2022_6.png",
+
+        "img/galeria/2023/2023_1.png",
+        "img/galeria/2023/2023_2.png",
+        "img/galeria/2023/2023_3.png",
+        "img/galeria/2023/2023_4.png",
+        "img/galeria/2023/2023_5.png",
+        "img/galeria/2023/2023_6.png",
+        "img/galeria/2023/2023_7.png",
+        "img/galeria/2023/2023_8.png",
+
+        "img/galeria/2024/2024_1.png",
+        "img/galeria/2024/2024_2.png",
+        "img/galeria/2024/2024_3.png",
+        "img/galeria/2024/2024_4.png",
+        "img/galeria/2024/2024_5.png",
+        "img/galeria/2024/2024_6.png",
+        "img/galeria/2024/2024_7.png",
     ];
 
     const galeriaContainer = document.getElementById('galeria-items');
 
-    // Iniciar la estructura del carrusel
+    // Inicia la estructura del carrusel
     let carouselHTML = `<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">`;
 
-    // Crear indicadores (puntos)
+    // Genera indicadores
     let indicatorsHTML = '<ol class="carousel-indicators">';
     for (let i = 0; i < galeriaData.length; i++) {
         indicatorsHTML += `<li data-target="#carouselExampleIndicators" data-slide-to="${i}" ${i === 0 ? 'class="active"' : ''}></li>`;
@@ -71,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     indicatorsHTML += '</ol>';
     carouselHTML += indicatorsHTML;
 
-    // Crear las imágenes del carrusel
+    // Genera las imágenes del carrusel
     carouselHTML += `<div class="carousel-inner">`;
     galeriaData.forEach((src, index) => {
         carouselHTML += `
@@ -82,21 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     carouselHTML += `</div>`; // Cierra carousel-inner
 
-    // Crear los controles (botones de anterior y siguiente)
-    const controlsHTML = `
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-        </a>
-    `;
+    // Cierra la estructura del carrusel sin añadir controles de navegación
+    carouselHTML += `</div>`; // Cierra el contenedor principal del carrusel
 
-    // Finalizar la estructura del carrusel
-    carouselHTML += controlsHTML + `</div>`; // Cierra el contenedor principal del carrusel
-
-    // Insertar el HTML generado en el contenedor
-    galeriaContainer.innerHTML = carouselHTML;
+    // Inserta solo el contenido del carrusel en el contenedor, sin sobrescribir los botones
+    galeriaContainer.insertAdjacentHTML('afterbegin', carouselHTML);
 });
