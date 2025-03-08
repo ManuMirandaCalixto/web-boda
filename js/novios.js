@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             align: "right"
         },
         {
-            imgSrc: "img/nosotros/Mari.jpg",
+            imgSrc: "C:/Users/manue/Desktop/galeria_fondo.jpg",
             name: "Mayka Souto Villegas",
             description: "Tiene por costumbre inventarse canciones y bailar cuando se encuentra feliz, y de alguna forma u otra siempre consigue que se me pegue algo de esa alegría que tiene. Es verdad que también es bastante cabezota, pero siempre transmite entusiasmo y felicidad allá por donde pasa. En definitiva la quiero muchísimo, y no puedo estar más contento de compartir la vida con ella.",
             signature: "Manu",
