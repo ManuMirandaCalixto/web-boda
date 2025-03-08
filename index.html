@@ -203,7 +203,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center">
-                        <form action="php/envia_mail.php" method="POST">
+                        <form action="https://formspree.io/f/xjkyblyw" method="POST">
+                            <input type="hidden" name="_next" value="return.html"> <!-- Método Simple -->
                             <div class="form-row">
                                 <!---
                                 <div class="form-group col-sm-6">
@@ -267,16 +268,34 @@
                             </div>
 
                             <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Enviar</button>
+                                <button class="btn btn-primary font-weight-bold py-3 px-5">Enviar</button>
                             </div>
                         </form>
+                        <script>
+                            document.querySelector("form").addEventListener("submit", async function(event) {
+                                event.preventDefault();
+                                let form = event.target;
+                                let formData = new FormData(form);
+                            
+                                let response = await fetch(form.action, {
+                                    method: form.method,
+                                    body: formData,
+                                    headers: { "Accept": "application/json" }
+                                });
+                            
+                                if (response.ok) {
+                                    window.location.href = "return.html"; // Redirige tras éxito
+                                } else {
+                                    alert("Hubo un error, intenta nuevamente.");
+                                }
+                            });
+                            </script>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- RSVP End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark-footer text-white py-5" id="contacto" style="margin-top: 90px;">
