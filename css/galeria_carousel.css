@@ -65,15 +65,14 @@
     transform: scale(1.1); /* Agrandar ligeramente los botones */
 }
 
-
 /* Ajustes para pantallas grandes */
-@media (min-width: 1200px) {
+@media screen and (min-width: 1920px) {
     .galeria-carousel-container {
         max-width: 80%; /* Carrusel ocupará el 80% del ancho en pantallas grandes */
     }
     .galeria-carousel-container .carousel-control-prev,
     .galeria-carousel-container .carousel-control-next {
-        top: -10%;
+        top: -7%;
     }
     .galeria-carousel-container .carousel-control-prev {
         left: 45%; /* Botón de "Anterior" más cerca del centro */
@@ -85,14 +84,14 @@
 }
 
 /* Ajustes para pantallas medianas */
-@media (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 1366px) and (max-width: 1919px) {
     .galeria-carousel-container {
         max-width: 90%; /* 90% del ancho en pantallas medianas */
     }
 }
 
 /* Ajustes para pantallas pequeñas (móviles) */
-@media (max-width: 767px) {
+@media screen and (max-width: 1365px) {
     .galeria-carousel-container .carousel-item {
         height: 0;
         padding-top: 100%; /* Relación de aspecto 16:9 */
@@ -103,13 +102,13 @@
     }
     .galeria-carousel-container .carousel-control-prev,
     .galeria-carousel-container .carousel-control-next {
-        top: -25%; /* Mueve los botones hacia arriba */
+        top: -10%; /* Mueve los botones hacia arriba */
     }
     .galeria-carousel-container .carousel-control-prev {
-        left: 20%; /* Botón de "Anterior" más cerca del centro */
+        left: 30%; /* Botón de "Anterior" más cerca del centro */
     }
     
     .galeria-carousel-container .carousel-control-next {
-        right: 20%; /* Botón de "Siguiente" más cerca del centro */
+        right: 30%; /* Botón de "Siguiente" más cerca del centro */
     }
 }
