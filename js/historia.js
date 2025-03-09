@@ -42,13 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
             date: "Enero de 2023",
             description: "\"Yo soy la Pepi\". Ya lo dije una vez en sueños, y es que esa bolita de amor estaba para nosotros. Ha gastado más de una vida ya, pero las que le quedan las va a pasar con nosotros.",
             align: "right"
-        },
-        {
-            imgSrc: "img/historia/historia7.jpg",
-            title: "Foto Preboda",
-            date: "AÑADIR FECHA",
-            description: "AÑADIR DESCRIPCIÓN",
-            align: "left"
         }
     ]
 

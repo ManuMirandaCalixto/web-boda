@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "img/galeria/2024/2024_5.png",
         "img/galeria/2024/2024_6.png",
         "img/galeria/2024/2024_7.png",
+
+        "img/galeria/2025/2025_1.png"
     ];
 
     const galeriaContainer = document.getElementById('galeria-items');
