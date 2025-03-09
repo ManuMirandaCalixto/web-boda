@@ -219,7 +219,7 @@
                                 </div>
 
                                 <div class="form-group col-sm-6">
-                                    <input id="email" name="email" type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Correo (Opcional)" style="padding-top: 1.5rem"/>
+                                    <input id="cancion" name="cancion" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Pon una canción que no pueda faltar" style="padding-top: 1.5rem" required="required"/>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -260,7 +260,7 @@
                             </div>
                             
                             <div class="form-group">
-                                <textarea name="message" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Dinos que canción no puede faltar, algo más que quieras comentar o simplemente deja un mensaje."></textarea>
+                                <textarea name="message" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="¡Comenta lo que quieras!"></textarea>
                             </div>
 
                             <div>
@@ -271,43 +271,7 @@
                             document.getElementById("rsvp-form").addEventListener("submit", async function(event) {
                                 event.preventDefault();
                                 let form = new FormData(event.target);
-
-                                // email y name
-                                let destEmail = document.getElementById("email").value;
-                                let destName = document.getElementById("name").value;
-
-                                // estructura del mail
-                                let destBody = `
-                                <html lang="es">
-                                <head>
-                                    <meta charset="UTF-8">
-                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                    <title>Agradecimientos</title>
-                                    <style>
-                                        body { font-family: "Arial", sans-serif; background-color: #3c1fdb; color: #333; margin: 0; padding: 0; }
-                                        .container { max-width: 600px; margin: 30px auto; background-color: #9b5e4f; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-                                        h1 { color: #D4AF37; }
-                                        p { line-height: 1.6; color: #fff; }
-                                        .footer { border-top: 1px solid #D4AF37; margin-top: 20px; font-size: 0.8em; padding-top: 10px; text-align: center; }
-                                        .p-f { color:#fff; }
-                                        .correo { color: #D4AF37; text-decoration: none; }
-                                    </style>
-                                </head>
-                                <body>
-                                    <div class="container">
-                                        <h1>¡Muchas gracias por apuntarte!</h1>
-                                        <p>Hola ${destName},</p>
-                                        <p>has decidido acompañarnos en esta aventura y tendremos en cuenta tus preferencias.</p>
-                                        <p>¡¡Te esperamos!!</p>
-
-                                        <div class="footer">
-                                            <p class="p-f"><br> Manu y Mayka<br> <a class="correo" href="mailto:labodademarimanu@gmail.com">labodademarimanu@gmail.com</a></p>
-                                            <p> &hearts; </p>
-                                        </div>
-                                    </div>
-                                </body>
-                                </html>`;
-
+                                
                                 // Enviar el formulario al principal
                                 let response = await fetch(event.target.action, {
                                     method: event.target.method,
@@ -315,21 +279,7 @@
                                     headers: { "Accept": "application/json" }
                                 });
 
-                                // Nuevo formulario para el mail del destinatario
-                                let destForm = new FormData();
-                                destForm.append("_cc", destEmail);
-                                destForm.append("_subject", "Confirmación de aistencia 🎉");
-                                destForm.append("message", destBody);
-                                destForm.append("_format", "html");
-                                
-                                // Enviar correo al destinatario
-                                let destResponse = await fetch("https://formspree.io/f/xjkyblyw", {
-                                    method: "POST",
-                                    body: destForm,
-                                    headers: { "Accept": "application/json" }
-                                });
-
-                                if (response.ok && destResponse.ok) {
+                                if (response.ok) {
                                     window.location.href = "return.html"; // Redirigir tras éxito
                                 } else {
                                     alert("Hubo un error, intenta nuevamente.");
