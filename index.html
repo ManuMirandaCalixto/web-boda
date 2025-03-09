@@ -6,7 +6,7 @@
     <title> Manu y Mayka</title>
     <meta content = "width=device-width, initial-scale=1.0" name = "viewport">
     
-    <!-- Icon --> <!-- FIXME -->
+    <!-- Icon -->
     <link href = "img/ico/icon.ico" rel = "icon">
 
     <!-- Google Web Fonts -->
@@ -47,9 +47,6 @@
                 <a href="#galeria" class="nav-item nav-link">Galería</a>
                 <a href="#evento" class="nav-item nav-link">Nuestro día</a>
                 <a href="#rsvp" class="nav-item nav-link">Save The Date</a>
-                <!---
-                <a href="#contacto" class="nav-item nav-link">Contacto</a>
-                -->
             </div>
         </div>
     </nav>
@@ -157,11 +154,6 @@
                 <h1 class="font-secondary display-4">Ceremonia y Celebración</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                    <!--<h5 class="font-weight-normal text-muted mb-3 pb-3">Primero nos vamos a ir a la iglesia, nos veis dadnos un besito y después al convite a comer prontito que a las 23 más o menos estoy ya en mi casa acostao</h5>-->
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-6 border-right border-primary">
                     <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
@@ -196,41 +188,20 @@
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                   <!-- <h5 class="font-weight-normal text-muted mb-3 pb-3">Descripción.</h5> -->
-                </div>
-            </div>
-            <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center">
-                        <form id="rsvp-form" action="https://formspree.io/f/xjkyblyw" method="POST">
-                            <input type="hidden" name="_next" value="return.html"> <!-- Método Simple -->
+                        <form id="rsvp-form" method="POST"> <!-- AÑADIR PARA CORREOS action="https://formspree.io/f/xjkyblyw" -->
                             <div class="form-row">
-                                <!---
                                 <div class="form-group col-sm-6">
-                                    <input name="name" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Nombre" required="required"/>
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <input name="last_name" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Apellidos" required="required"/>
-                                </div>
-                                -->
-                                <div class="form-group col-sm-6">
-                                    <input id="name" name="name" type="text" class="form-control bg-secondary border-0 py-4 px-3"placeholder="Nombre y Apellidos" style="padding-top: 1.5rem" required="required"/>
+                                    <input id="name" name="name" type="text" class="form-control bg-secondary border-0 py-4 px-3"placeholder="Nombre y Apellidos de los invitados" style="padding-top: 1.5rem" required="required"/>
                                 </div>
 
-                                <div class="form-group col-sm-6">
-                                    <input id="cancion" name="cancion" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Pon una canción que no pueda faltar" style="padding-top: 1.5rem" required="required"/>
-                                </div>
-                            </div>
-                            <div class="form-row">
                                 <div class="form-group col-sm-6">
                                     <input name="tel" type="tel" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Teléfono (Opcional)" style="padding-top: 1.5rem"/>
                                 </div>
+                            </div>
 
-                                <div class="form-group col-sm-6">
-                                    <input name="alergias" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Alergias o Intolerancias" style="padding-top: 1.5rem"/>
-                                </div>
-
+                            <div class="form-row">
                                 <div class="col-sm-6">
                                     <select name="menu" class="form-control bg-secondary border-0" style="height: 50px; padding-top: 0.375rem;" required="required">
                                         <option value="" disabled selected hidden>¿Qué menú te gustaría tomar?</option>
@@ -247,17 +218,18 @@
                                         <option>No, prefiero ir por mi cuenta</option>
                                     </select>
                                 </div>
-                                
-                                <!---
-                                <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
-                                        <option>Me apunto a todo</option>
-                                        <option>Solo la Ceremonia</option>
-                                        <option>Solo la Celebración</option>
-                                    </select>
-                                </div>
-                                -->
                             </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <input name="alergias" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Alergias o Intolerancias" style="padding-top: 1.5rem"/>
+                                </div>
+
+                                <div class="form-group col-sm-6">
+                                    <input id="cancion" name="cancion" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="¿Qué canciones no pueden faltar?" style="padding-top: 1.5rem"/>
+                                </div>
+                            </div>
+                            
                             
                             <div class="form-group">
                                 <textarea name="message" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="¡Comenta lo que quieras!"></textarea>
@@ -267,23 +239,39 @@
                                 <button class="btn btn-primary font-weight-bold py-3 px-5">Enviar</button>
                             </div>
                         </form>
+
+                        <!-- Mensaje de éxito oculto por defecto -->
+                        <div id="success-message" class="mensaje-exito" style="display: none;">
+                            <h4 class="sin_negrita">Formulario enviado con éxito. ¡¡Te esperamos en la boda!! &hearts;</h4>
+                            <button id="show-form-btn" class="btn btn-primary font-weight-bold py-3 px-5">Volver al formulario</button>
+                        </div>
                         <script>
                             document.getElementById("rsvp-form").addEventListener("submit", async function(event) {
                                 event.preventDefault();
                                 let form = new FormData(event.target);
                                 
-                                // Enviar el formulario al principal
+                                // COMENTADO PARA LA DESACTIVACIÓN DE LOS CORREOS
+                                /*
                                 let response = await fetch(event.target.action, {
                                     method: event.target.method,
                                     body: form,
                                     headers: { "Accept": "application/json" }
                                 });
+                                */
 
-                                if (response.ok) {
-                                    window.location.href = "return.html"; // Redirigir tras éxito
+                                if (true) { // if (response.ok)
+                                    document.getElementById("rsvp-form").style.display = "none";
+                                    document.getElementById("success-message").style.display = "block";
                                 } else {
                                     alert("Hubo un error, intenta nuevamente.");
                                 }
+                            });
+
+                            document.getElementById("show-form-btn").addEventListener("click", function() {
+                                let form = document.getElementById("rsvp-form");
+                                form.reset();
+                                form.style.display = "block";
+                                document.getElementById("success-message").style.display = "none";
                             });
                         </script>
                     </div>
@@ -300,15 +288,6 @@
                 <h1 class="font-secondary display-3 text-white">¡Gracias por acompañarnos en esta aventura!</h1>
                 <i class="far fa-heart corazon-footer"></i>
             </div>
-            <!--
-            <div class="d-flex justify-content-center mb-4">
-                FIXME Redes Sociales
-                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            -->
             <div class="d-flex justify-content-center text-footer-container py-2">
                 <p class="text-footer">labodademarimanu@gmail.com</p>
                 <p class="text-footer">603 801 211 (Manu)</p>
@@ -335,8 +314,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
-
 
 </body>
 </html>

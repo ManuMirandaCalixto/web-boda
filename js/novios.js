@@ -60,14 +60,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     })
 });
-
-
-/*
-<div class="position-relative">
-    FIXME Redes Sociales Manu
-    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
-    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
-    <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
-</div>
-*/
