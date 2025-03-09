@@ -201,6 +201,8 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  max-width: 100%;
+  height: auto;
 }
 
 svg {
@@ -9876,7 +9878,6 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .bg-gallery { /* MMC AQUI SE CONTROLA EL FONDO DE LA GALERIA */
-  /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/galeria6.jpg), no-repeat center center;*/
   background-color: #EDF5F7; /* ANTERIORMENTE SECUOYA */
   background-size: cover;
 }
